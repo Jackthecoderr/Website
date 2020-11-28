@@ -63,7 +63,7 @@ font-family: Helvetica;
 a:hover{
     background-color: #00acb5;
     color: #ffffff;
-    box-shadow: 19px 13px 11px 1px #000000;
+   
     -webkit-filter: blur(0px);
 filter: blur(0px);
 -webkit-filter: brightness(1);
