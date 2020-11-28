@@ -63,7 +63,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-around;
-    height: 80vh;
+    height: 100vh;
     background: #031628; 
   }
   .btn {
