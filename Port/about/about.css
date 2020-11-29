@@ -82,7 +82,7 @@ background: linear-gradient(90deg,
     background-color: #474e5d;
     color: white;
     filter: brightness(.8) contrast(1.1);
-    transition:0.6s;
+    transition:1.3s;
     backface-visibility: hidden;
   }
   
@@ -200,4 +200,18 @@ background: linear-gradient(90deg,
     background-color: #f19500fb;
     cursor: pointer;
     transition-duration: 0.6s;
+  }
+
+.about-section{
+    animation: fade 5s ease forwards;
+  }
+  @keyframes fade{
+    from{
+      opacity: 0;
+
+    }
+    to{
+      opacity: 1;
+
+    }
   }
