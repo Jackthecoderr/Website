@@ -82,7 +82,7 @@ background: linear-gradient(90deg,
     background-color: #474e5d;
     color: white;
     filter: brightness(.8) contrast(1.1);
-    transition:1.3s;
+    transition:0.7s;
     backface-visibility: hidden;
   }
   
