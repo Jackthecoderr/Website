@@ -1,13 +1,18 @@
-body{
-    background-color: #161618;
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-size:8px;
+    font-family: 'Poppins', sans-serif;
     user-select: none; /* supported by Chrome and Opera */
    -webkit-user-select: none; /* Safari */
    -khtml-user-select: none; /* Konqueror HTML */
    -moz-user-select: none; /* Firefox */
    -ms-user-select: none;
-  }
-  /* Add a black background color to the top navigation */
-  .topnav {
+   
+}
+.topnav {
     background-color: #333;
     overflow: hidden;
   }
@@ -39,39 +44,103 @@ body{
   .topnav-right {
   float: right;
   }
-  
-  
-  /*******FooteR*******/
-  
-  footer {
-    text-align: center;
-    padding: 3px;
-    background-color:	rgba(33, 33, 36, 0.616);
-    color: white;
+  .container::-webkit-scrollbar{
+    display: none;
   }
-  body, html {
-    height: 100%;
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-  }
-  
-  * {
-    box-sizing: border-box;
-  }
+.container{
+    
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: auto;
+    scroll-snap-type: y mandatory;
+    
 
-  #neon-btn {
+}
+.container .section{
+    
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-blend-mode: multiply;
+    scroll-snap-align:start;
+}
+.container .section:nth-child(1)
+{
+    background: url(./home.jpg);
+    background-size:cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+.container .section:nth-child(2)
+{
+    background:  url(./projects.jpg);
+    background-size:cover;
+    background-attachment: fixed;
+
+}
+.container .section:nth-child(3)
+{
+    background:  url(./contact.jpg);
+    background-size:cover;
+    background-attachment: fixed;
+
+}
+.container .section:nth-child(4)
+{
+    background:  url(./about.jpg);
+    background-size:cover;
+    background-attachment: fixed;
+
+}
+.container .section .content{
+    position: absolute;
+    bottom: 50px;
+    left: 50px;
+    max-width: 700px;
+}
+.container .section .content a{
+   background:rgba(61, 61, 61, 0.39);
+   color:rgb(255, 255, 255);
+   font-weight: 600;
+   display:inline-block;
+   padding: 5px 30px;
+   font-size:2em;
+   text-decoration: none;
+}
+.container .section .content p{
+    background: #ffffff46;;
+    color:#111;
+    font-weight: 300;
+    display:inline-block;
+    padding: 2% 2%;
+    font-size:2em;
+    margin-top: 10px;
+ }
+ .container .section .content a:hover{
+     background-color: rgba(24, 173, 179, 0.486);
+ }
+ .container .section .content p:hover{
+     background: rgba(241, 241, 241, 0.63);
+     transition-duration: 1.5s;
+
+ }
+
+
+ #neon-btn {
     display: flex;
     align-items: center;
     justify-content: space-around;
     height: 100%;
     background: #031628; 
   }
+
   .btn {
-    border: 1px solid;
+    border: 0px solid;
     background-color: transparent;
     text-transform: uppercase;
     font-size: 14px;
-    padding: 10px 20px;
+    padding: 5px 15px;
     font-weight: 300;
   }
   .two {
@@ -88,6 +157,13 @@ body{
     cursor: pointer;
   }
 
+
+ footer {
+    text-align: center;
+    padding: 20px;
+    background-color:	#2121249D;
+    color: white;
+  }
   .topnav-right a:hover{
     background-color:#738ADB;
 }
@@ -98,16 +174,5 @@ body{
     background-color: rgb(40, 40, 51);
     cursor: crosshair;
   }
-  .topnav{
-    animation: nav-load 600ms ease-in-out;
-  }
-  @keyframes nav-load {
-    0%{
-      transform: translateY(-100%);
-    }
 
-    100%{
-      transform: translateY(0%);
-
-    }
-  }
+ 
